@@ -19,7 +19,7 @@ After installing the module, you must make some changes to your installation's
     's3_file_store' => [
         'client_params' => [
             'region' => '<fill in AWS region>',
-            'credentials => [
+            'credentials' => [
                 'key' => '<fill in AWS key>',
                 'secret' => '<fill in AWS secret key>',
             ],
