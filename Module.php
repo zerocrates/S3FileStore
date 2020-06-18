@@ -2,7 +2,7 @@
 namespace S3FileStore;
 
 use Omeka\Module\AbstractModule;
-use Zend\Mvc\MvcEvent;
+use Laminas\Mvc\MvcEvent;
 
 class Module extends AbstractModule
 {

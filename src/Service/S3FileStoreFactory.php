@@ -3,7 +3,7 @@ namespace S3FileStore\Service;
 
 use Interop\Container\ContainerInterface;
 use S3FileStore\S3FileStore;
-use Zend\ServiceManager\Factory\FactoryInterface;
+use Laminas\ServiceManager\Factory\FactoryInterface;
 
 class S3FileStoreFactory implements FactoryInterface
 {
