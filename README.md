@@ -26,4 +26,12 @@ After installing the module, you must make some changes to your installation's
         ],
         'bucket' => '<fill in S3 bucket name>',
     ],
+
+    // alternatively, if using an EC2 role instead of credentials
+    's3_file_store' => [
+        'client_params' => [
+            'region' => '<fill in AWS region>',
+        ],
+        'bucket' => '<fill in S3 bucket name>',
+    ],
 ```
