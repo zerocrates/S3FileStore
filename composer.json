@@ -3,6 +3,6 @@
         "aws/aws-sdk-php": "^3.86"
     },
     "config": {
-        "platform": {"php": "7.2"}
+        "platform": {"php": "7.2.5"}
     }
 }
