@@ -5,6 +5,7 @@ use Aws\DoctrineCacheAdapter;
 use Aws\S3\S3Client;
 use Doctrine\Common\Cache\ApcuCache;
 use finfo;
+use GuzzleHttp\Psr7\MimeType;
 use Omeka\File\Store\StoreInterface;
 
 class S3FileStore implements StoreInterface
@@ -37,7 +38,10 @@ class S3FileStore implements StoreInterface
 
     public function put($source, $storagePath)
     {
-        $mediaType = $this->finfo->file($source);
+        $mediaType = MimeType::fromFilename($storagePath);
+        if (!$mediaType) {
+            $mediaType = $this->finfo->file($source);
+        }
         $this->client->putObject([
             'Bucket' => $this->bucket,
             'Key' => $storagePath,
